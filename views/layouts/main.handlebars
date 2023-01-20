@@ -14,32 +14,24 @@
     <!-- ===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
 
-<body>
-  <header class="text-center m-3 p-3 bg-primary">
-    <h1>Welcome to YOUR ONE STOP SHOP</h1>
+  <header class="text-center m-3 p-3 border-bottom">
+    <h1>Welcome to ONE STOP SHOP</h1>
+    <nav>
+    <a class= text-white href="/controllers/myStoreItemsRoutes.js">My Store</a>
+    <a class= text-white href="/controllers/api/marketplaceRoutes.js">Marketplace</a>
+    </nav>
   </header>
-  <nav>
-    <a href="/">My Store</a>
-    <a href="/">Marketplace</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <aside>
-      <h2>Enjoy the galleries!</h2>
-    </aside>
-    <div class="gallery">
-      {{{body}}}
-    </div>
-  </main>
-  {{#if loggedIn}}
-       <script src="/script.js"></script>
+  
+<body>
+  
+
+
+
+
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
