@@ -1,21 +1,21 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { newitem} = require('../models/newitem');
 
-const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const newItemData = require('./newItemData.json');
+const marketPlaceData = require('./projectData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
+  const newitem = await newitem.bulkCreate(newItemData, {
     individualHooks: true,
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+  for (const marketplace of marketPlaceData) {
+    await marketplace.create({
+      ...marketplace,
+      newitem_id: newitem[Math.floor(Math.random() * newitem.length)].id,
     });
   }
 
