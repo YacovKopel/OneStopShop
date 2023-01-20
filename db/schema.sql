@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS oneStopShop_db;
-CREATE DATABASE oneStopShop_db;
+DROP DATABASE IF EXISTS onestopshop_db;
+CREATE DATABASE onestopshop_db;
