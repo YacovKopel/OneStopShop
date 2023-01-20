@@ -33,50 +33,59 @@ const container = document.querySelector(".container"),
         container.classList.remove("active");
     });
 
-
-
-
-
-// $('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-//     var $this = $(this),
-//         label = $this.prev('label');
-  
-//         if (e.type === 'keyup') {
-//               if ($this.val() === '') {
-//             label.removeClass('active highlight');
-//           } else {
-//             label.addClass('active highlight');
-//           }
-//       } else if (e.type === 'blur') {
-//           if( $this.val() === '' ) {
-//               label.removeClass('active highlight'); 
-//               } else {
-//               label.removeClass('highlight');   
-//               }   
-//       } else if (e.type === 'focus') {
-        
-//         if( $this.val() === '' ) {
-//               label.removeClass('highlight'); 
-//               } 
-//         else if( $this.val() !== '' ) {
-//               label.addClass('highlight');
-//               }
-//       }
-  
-//   });
-  
-//   $('.tab a').on('click', function (e) {
-    
-//     e.preventDefault();
-    
-//     $(this).parent().addClass('active');
-//     $(this).parent().siblings().removeClass('active');
-    
-//     target = $(this).attr('href');
-  
-//     $('.tab-content > div').not(target).hide();
-    
-//     $(target).fadeIn(600);
-    
-//   });
+    const loginFormHandler = async (event) => {
+        // Stop the browser from submitting the form so we can do so with JavaScript
+        event.preventDefault();
+      
+        // Gather the data from the form elements on the page
+        const email = document.querySelector('#email-login').value.trim();
+        const password = document.querySelector('#password-login').value.trim();
+      
+        if (email && password) {
+          // Send the e-mail and password to the server
+          const response = await fetch('/api/users/login', {
+            method: 'POST',
+            body: JSON.stringify({ email, password }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+      
+          if (response.ok) {
+            document.location.replace('/');
+          } else {
+            alert('Failed to log in');
+          }
+        }
+      };
+      document
+        .querySelector('.login')
+        .addEventListener('submit', loginFormHandler);
+      
+      const registerFormHandler = async (event) => {
+        // Stop the browser from submitting the form so we can do so with JavaScript
+        event.preventDefault();
+      
+        // Gather the data from the form elements on the page
+        const username= document.querySelector('#signUpName').value.trim();
+        const email= document.querySelector('#signUpEmail').value.trim();
+        const password= document.querySelector('#signUpPassword').value.trim();
+      
+        if (username && email && password) {
+          // Send the e-mail and password to the server
+          const response = await fetch('/api/users/login', {
+            method: 'POST',
+            body: JSON.stringify({username, email, password }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+      
+          if (response.ok) {
+            document.location.replace('/');
+          } else {
+            alert('Failed to log in');
+          }
+        }
+      };
+      
+      document
+        .querySelector('.signup')
+        .addEventListener('submit', loginFormHandler);
+      
