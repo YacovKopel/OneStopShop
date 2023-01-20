@@ -1,0 +1,563 @@
+/* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070f4;
+}
+
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #265df2;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+
+/* @Import Url('Https://Fonts.Googleapis.Com/Css2?Family=Poppins&Display=Swap');
+
+*{
+Box-Sizing: Border-Box;
+}
+
+Body{
+Margin: 0;
+Font-Family: Poppins, Arial, Helvetica, Sans-Serif;
+Font-Size: 16px;
+Font-Weight: 400;
+Color: #666666;
+Background: #Eaeff4;
+}
+
+.Wrapper{
+Margin: 0 Auto;
+Width: 100%;
+Max-Width: 1140px;
+Min-Height: 100vh;
+Display: Flex;
+Align-Items: Center;
+Justify-Content: Center;
+Flex-Direction: Column;
+}
+
+.Container{
+Position: Relative;
+Width: 100%;
+Max-Width: 600px;
+Height: Auto;
+Display: Flex;
+Background: #Ffffff;
+Box-Shadow: 0 0 5px #999999;
+}
+
+
+
+.Login .Col-Left,
+.Login .Col-Right{
+Padding: 30px;
+Display: Flex;
+}
+
+
+.Login .Col-Left{
+    Width: 60%;
+    Clip-Path: Polygon(0 0, 0% 100%, 100% 0 );
+    Background: #2aa15f;
+    }
+
+    .Login .Col-Right{
+    Padding: 60px 30px;
+    Width: 50%;
+    Margin-Left: -10%;
+    }
+    
+    
+    @Media(Max-Width: 575px){
+        .Login .Container{
+        Flex-Direction: Column;
+        Box-Shadow: None;
+        }
+        .Login .Col-Left,
+        .Login .Col-Right{
+        Width: 100%;
+        Margin: 0;
+        Clip-Path: None;
+        }
+        .Login .Col-Right{
+        Padding: 30px;
+        }
+        
+        }
+
+        
+        .Login .Login-Text{
+        Position: Relative;
+        Width: 100%;
+        Color: #Ffffff;
+        }
+
+        .Login .Login-Text H2{
+        Margin: 0 0 15px 0;
+        Font-Size: 30px;
+        Font-Weight: 700;
+        }
+
+        .Login .Login-Text P{
+        Margin: 0 0 20px 0;
+        Font-Size: 16px;
+        Font-Weight: 500;
+        Line-Height: 22px;
+        }
+        
+        .Login .Login-Text .Btn{
+        Display: Inline-Block;
+        Font-Family: Poppins;
+        Padding: 7px 20px;
+        Font-Size: 16px;
+        Letter-Spacing: 1px;
+        Text-Decoration: None;
+        Border-Radius: 30px;
+        Color: #Ffffff;
+        Outline: None;
+        Border: 1px Solid #Ffffff;
+        Box-Shadow: Inset 0 0 0 0 #Ffffff;
+        Transition: .3s;
+        }
+        
+        .Login .Login-Text .Btn:hover{
+        Color: #2aa15f;
+        Box-Shadow: Inset 150px 0 0 0 #Ffffff;
+        }
+        
+        .Login .Login-Form{
+        Position: Relative;
+        Width: 100%;
+        }
+        .Login .Login-Form H2{
+        Margin: 0 0 15px 0;
+        Font-Size: 22px;
+        Font-Weight: 700;
+        }
+        .Login .Login-Form P{
+        Margin: 0 0 10px 0;
+        Text-Align: Left;
+        Color: #666666;
+        Font-Size: 15px;
+        }
+        .Login .Login-Form P:last-Child{
+        Margin: 0;
+        Padding-Top: 3px;
+        }
+        .Login .Login-Form P A{
+        Color: #2aa15f;
+        Font-Size: 14px;
+        Text-Decoration: None;
+        }
+        .Login .Login-Form Label {
+        Display: Block;
+        Width: 100%;
+        Margin-Bottom: 2px;
+        Letter-Spacing: .5px;
+        }
+        .Login .Login-Form P:last-Child Label{
+        Width: 60%;
+        Float: Left;
+        }
+        .Login .Login-Form Label Span{
+        Color: #Ff574e;
+        Padding-Left: 2px;
+        }
+        .Login .Login-Form Input{
+        Display: Block;
+        Width: 100%;
+        Height: 35px;
+        Padding: 0 10px;
+        Outline: None;
+        Border: 1px Solid #Cccccc;
+        Border-Radius: 30px;
+        }
+        .Login .Login-Form Input:focus{
+        Border-Color: #Ff574e;
+        }
+        .Login .Login-Form Button,
+        .Login .Login-Form Input[Type=Submit] {
+        Display: Inline-Block;
+        Width: 100%;
+        Margin-Top: 5px;
+        Color: #2aa15f;
+        Font-Size: 16px;
+        Letter-Spacing: 1px;
+        Cursor: Pointer;
+        Background: Transparent;
+        Border: 1px Solid #2aa15f;
+        Border-Radius: 30px;
+        Box-Shadow: Inset 0 0 0 0 #2aa15f;
+        Transition: .3s;
+        }
+        .Login .Login-Form Button:hover,
+        .Login .Login-Form Input[Type=Submit]:Hover{
+        Color: #Ffffff;
+        Box-Shadow: Inset 250px 0 0 0 #2aa15f;
+        }
+ */
+
+/* @import "compass/css3";
+
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+
+$main: #1ab188;
+$main-light: lighten($main,5%);
+$main-dark: darken($main,5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll; 
+}
+
+body {
+  background:$body-bg;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration:none;
+  color:$main;
+  transition:.5s ease;
+  &:hover {
+    color:$main-dark;
+  }
+}
+
+.form {
+  background:rgba($form-bg,.9);
+  padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+  border-radius:$br;
+  box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+}
+
+.tab-group {
+  list-style:none;
+  padding:0;
+  margin:0 0 40px 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  li a {
+    display:block;
+    text-decoration:none;
+    padding:15px;
+    background:rgba($gray-light,.25);
+    color:$gray-light;
+    font-size:20px;
+    float:left;
+    width:50%;
+    text-align:center;
+    cursor:pointer;
+    transition:.5s ease;
+    &:hover {
+      background:$main-dark;
+      color:$white;
+    }
+  }
+  .active a {
+    background:$main;
+    color:$white;
+  }
+}
+
+.tab-content > div:last-child {
+  display:none;
+}
+
+
+h1 {
+  text-align:center;
+  color:$white;
+  font-weight:$thin;
+  margin:0 0 40px;
+}
+
+label {
+  position:absolute;
+  transform:translateY(6px);
+  left:13px;
+  color:rgba($white,.5);
+  transition:all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size:22px;
+  .req {
+  	margin:2px;
+  	color:$main;
+  }
+}
+
+label.active {
+  transform:translateY(50px);
+  left:2px;
+  font-size:14px;
+  .req {
+    opacity:0;
+  }
+}
+
+label.highlight {
+	color:$white;
+}
+
+input, textarea {
+  font-size:22px;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:5px 10px;
+  background:none;
+  background-image:none;
+  border:1px solid $gray-light;
+  color:$white;
+  border-radius:0;
+  transition:border-color .25s ease, box-shadow .25s ease;
+  &:focus {
+		outline:0;
+		border-color:$main;
+  }
+}
+
+textarea {
+  border:2px solid $gray-light;
+  resize: vertical;
+}
+
+.field-wrap {
+  position:relative;
+  margin-bottom:40px;
+}
+
+.top-row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  > div {
+    float:left;
+    width:48%;
+    margin-right:4%;
+    &:last-child { 
+      margin:0;
+    }
+  }
+}
+
+.button {
+  border:0;
+  outline:none;
+  border-radius:0;
+  padding:15px 0;
+  font-size:2rem;
+  font-weight:$bold;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:$main;
+  color:$white;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+  &:hover, &:focus {
+    background:$main-dark;
+  }
+}
+
+.button-block {
+  display:block;
+  width:100%;
+}
+
+.forgot {
+  margin-top:-20px;
+  text-align:right;
+} */
