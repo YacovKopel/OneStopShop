@@ -1,19 +1,15 @@
 const router = require('express').Router();
-const { User, Project } = require('../models');
+const { newitem } = require('../../models/newitem');
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     // Get all users, sorted by name
-    const projectData = await Project.findAll({
-      include:[{model: User, 
-      attributes: "name"}]
-    });
-
+   const newItemData = await newitem.create(req.body)
     // Serialize user data so templates can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const newItem = newItemData.map((marketplace) => marketplace.post({ plain: true }));
 
     // Pass serialized data into Handlebars.js template
-    res.render('homepage', { projects });
+    res.render('marketplace', { newItem });
   } catch (err) {
     res.status(500).json(err);
   }

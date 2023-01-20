@@ -1,9 +1,14 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { marketplace } = require('../../models');
 
-router.post('/', async (req, res) => {
+
+
+// marketplace sould only have a get router.get('/'async)
+// and a login requirment
+
+router.get('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
+    const userData = await marketplace.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
