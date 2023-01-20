@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const marketplaceRoutes = require('./marketplaceRoutes');
+const newItemRoutes = require('./newItemRoutes');
 
 
 // Change later to fit our models
-// router.use('/users', userRoutes);
-// router.use('/projects', projectRoutes);
+router.use('/marketplace',marketplaceRoutes);
+router.use('/newItem', newItemRoutes);
 
 module.exports = router;
