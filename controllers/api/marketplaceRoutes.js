@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { marketplace } = require("../../models");
+const { marketplace } = require("../../models/marketplace");
 
 // marketplace sould only have a get router.get('/'async)
 // and a login requirment
