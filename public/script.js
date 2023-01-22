@@ -43,7 +43,7 @@ const container = document.querySelector(".container"),
       
         if (email && password) {
           // Send the e-mail and password to the server
-          const response = await fetch('/api/users/login', {
+          const response = await fetch('/api', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
@@ -57,8 +57,8 @@ const container = document.querySelector(".container"),
         }
       };
       document
-        .querySelector('.login')
-        .addEventListener('submit', loginFormHandler);
+        .querySelector("div.input-field input[name='loginBtn']")
+        .addEventListener('click', loginFormHandler);
       
       const registerFormHandler = async (event) => {
         // Stop the browser from submitting the form so we can do so with JavaScript
@@ -71,7 +71,7 @@ const container = document.querySelector(".container"),
       
         if (username && email && password) {
           // Send the e-mail and password to the server
-          const response = await fetch('/api/users/login', {
+          const response = await fetch('/api/', {
             method: 'POST',
             body: JSON.stringify({username, email, password }),
             headers: { 'Content-Type': 'application/json' },
@@ -86,6 +86,6 @@ const container = document.querySelector(".container"),
       };
       
       document
-        .querySelector('.signup')
-        .addEventListener('submit', loginFormHandler);
+        .querySelector("div.input-field input[name='signupBtn']")
+        .addEventListener('click', registerFormHandler);
       
