@@ -1,12 +1,30 @@
-<section>
-    <div class="card">
+<section class="newItem">
+  <div class="imageURL">
+    <h3> <u>Image: </u></h3>
+    <input type="url" name="image" id="image" placeholder="Enter image URL">
+    <br>
+    <!-- <input type="image" src="./demo.jpeg" alt="" width="300" height="300"> -->
+  </div>
 
-      <input type="file" class="card"/><br>
-      <div class="card-body"><br>
-        <input type="text" placeholder="Item name" class="text" /><br />
-        <input type="date" placeholder="Todays Date" class="text"/><br />
-        <input type="text" placeholder="description" class="text" id="big" /><br>
-        <button>Post to Market Place</button>
-      </div>
-    </div> 
+  <div>
+    <h3> <u>Description: </u></h3>
+    <textarea id="description" rows="8" cols="50" placeholder="Description of item"></textarea>
+  </div>
+
+  <div>
+    <h3><u>Price:</u></h3>
+    <input type="number" name="Price" id="price" placeholder="$">
+  </div>
+
+  <!-- to get value from textarea -->
+  <!-- <script>
+    function getDescription() {
+      document.getElementById("description").value;
+    }
+    </script> -->
+    <div>
+      <button class="addItem" type="submit">ADD ITEM TO STORE</button>
+    </div>
+
+  </section>
   </section>
