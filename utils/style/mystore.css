@@ -1,52 +1,42 @@
-body{
-    background-color: rgb(87, 87, 255);
+body {
+  background-color: rgb(87, 87, 255);
 }
 
-
-
-
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    font-family: arial;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  
-  }
-  
-  .price {
-    color:black;
-    font-size: 22px;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-  .nav{
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    margin: 5px;
+.price {
+  color: black;
+  font-size: 22px;
+}
 
-  }
-  h1{
-    font-size: 40pt;
-  }
+.nav {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+}
+h1 {
+  font-size: 40pt;
+}
 
-  .card img{
-    width: auto;
-    height: 100px;
-  }
+.card img {
+  width: auto;
+  height: 100px;
+}
 
-  p{
-    font-weight: bold;
-  }
- button{
-    background-color: rgb(185, 185, 255);
- }
+p {
+  font-weight: bold;
+}
 
- .next{
+.next {
   display: flex;
   justify-content: end;
-
-  
- }
+}

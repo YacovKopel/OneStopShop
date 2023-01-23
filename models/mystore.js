@@ -34,15 +34,6 @@ mystore.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      gender: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      size: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-  
     
   },
   

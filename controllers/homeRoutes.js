@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, mystore } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -16,18 +16,15 @@ router.get('/newItem', async (req, res) => {
   }
 });
 
-// router.post('/', async (req, res) => {
-//   try {
-//     const newProject = await Project.create({
-//       ...req.body,
-//       user_id: req.session.user_id,
-//     });
 
-//     res.status(200).json(newProject);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+router.get('/mystore', async (req, res) => {
+  try {
+
+    res.render('mystore');
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 // router.delete('/:id', async (req, res) => {
 //   try {

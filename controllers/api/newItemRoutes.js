@@ -1,5 +1,5 @@
 const router = require('express').Router();
-// // const { User, Project } = require('../models');
+// const { User, Project } = require('../models');
 
 
 //     // Serialize user data so templates can read it
