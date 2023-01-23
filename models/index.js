@@ -1,15 +1,13 @@
-const newitem = require("./newitem");
-const mystore = require("./mystore");
-const marketplace = require("./marketplace");
+const Product = require("./Product");
 const User=require("./User")
 
-newitem.hasMany(marketplace, {
-  foreignKey: "newitem_id",
-  onDelete: "CASCADE",
-});
+// newitem.hasMany(marketplace, {
+//   foreignKey: "newitem_id",
+//   onDelete: "CASCADE",
+// });
 
-marketplace.belongsTo(mystore, {
-  foreignKey: "newitem_id",
-});
+// marketplace.belongsTo(mystore, {
+//   foreignKey: "newitem_id",
+// });
 
-module.exports = { newitem, mystore, marketplace, User };
+module.exports = { Product,  User };
