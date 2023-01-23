@@ -1,12 +1,12 @@
 const router = require("express").Router();
-const { marketplace } = require("../../models");
+const { Marketplace } = require("../../models");
 
 // marketplace sould only have a get router.get('/'async)
 // and a login requirment
 
 router.get("/", async (req, res) => {
   try {
-    const userData = await marketplace.create(req.body);
+    const userData = await Marketplace.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
