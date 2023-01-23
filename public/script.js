@@ -43,14 +43,14 @@ const container = document.querySelector(".container"),
       
         if (email && password) {
           // Send the e-mail and password to the server
-          const response = await fetch('/api/user', {
+          const response = await fetch('/api/user/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
           });
       
           if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/marketplace');
           } else {
             alert('Failed to log in');
           }
@@ -71,14 +71,14 @@ const container = document.querySelector(".container"),
       
         if (username && email && password) {
           // Send the e-mail and password to the server
-          const response = await fetch('/api/user', {
+          const response = await fetch('/api/user/signup', {
             method: 'POST',
             body: JSON.stringify({username, email, password }),
             headers: { 'Content-Type': 'application/json' },
           });
       
           if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/marketplace');
           } else {
             alert('Failed to log in');
           }
@@ -89,3 +89,6 @@ const container = document.querySelector(".container"),
         .querySelector("div.input-field input[name='signupBtn']")
         .addEventListener('click', registerFormHandler);
       
+
+        // add js to grab value of each one
+        // then post to api/newitem/post input value in body

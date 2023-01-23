@@ -17,7 +17,7 @@ router.get('/newItem', async (req, res) => {
 });
 
 
-router.get('/mystore', async (req, res) => {
+router.get('/user', async (req, res) => {
   try {
 
     res.render('mystore');
@@ -26,6 +26,14 @@ router.get('/mystore', async (req, res) => {
   }
 });
 
+router.get('/marketplace', async (req, res) => {
+  try {
+
+    res.render('marketplace');
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 // router.delete('/:id', async (req, res) => {
 //   try {
 //     const projectData = await Project.destroy({
