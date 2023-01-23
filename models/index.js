@@ -1,13 +1,15 @@
-const User = require('./User');
-const Project = require('./Project');
+const newitem = require("./newitem");
+const mystore = require("./mystore");
+const marketplace = require("./marketplace");
+const User=require("./User")
 
-User.hasMany(Project, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+newitem.hasMany(marketplace, {
+  foreignKey: "newitem_id",
+  onDelete: "CASCADE",
 });
 
-Project.belongsTo(User, {
-  foreignKey: 'user_id'
+marketplace.belongsTo(mystore, {
+  foreignKey: "newitem_id",
 });
 
-module.exports = { User, Project };
+module.exports = { newitem, mystore, marketplace, User };
