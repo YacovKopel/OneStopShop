@@ -48,6 +48,21 @@ router.get('/marketplace', async (req, res) => {
   }
 });
 
+// Logout
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
+// Redirect all other routes to homepage
+router.get("*", (req, res) => {
+    res.redirect('/');
+    return;
+});
 
 module.exports = router;
