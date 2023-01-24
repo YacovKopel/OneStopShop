@@ -1,22 +1,21 @@
 const router = require("express").Router();
 const { Product } = require("../../models");
 
-router.get('/newItem', async (req, res) => {
-  try {
-    const newItemData = await Product.findAll()
-
-    const products = newItemData.map((product) =>
-      product.get({ plain: true })
-    );
-
-    req.session.save(() => {
-      res.render('mystore', {
-        products
-      });
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+router.put("/onmkt/:id", async (req, res) => {
+  try{
+  const itemData = Product.update(
+    {
+      onMarketplace: true,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+  res.status(200).json({message: "Added to marketplace"})
+  }catch(err){
+    res.status(500).json({message: err.message})
   }
 });
 

@@ -3,4 +3,9 @@
         <p class="mystoreprice">{{price}}</p>
         <p>{{product_name}} <br> Description: {{description}}</p>
         <p>{{username}}</p>
+        {{#if onMarketplace}}
+        <button class="btn mktbtn" data-id="{{id}}"> ON MARKETPLACE</button>
+        {{else}}
+        <button class="btn mktbtn" data-id="{{id}}"> POST TO MARKETPLACE</button>
+        {{/if}}
         </div>
