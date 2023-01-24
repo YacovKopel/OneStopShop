@@ -23,7 +23,9 @@
     <a class= text-white href="/mystore">My Store</a>
     <a class= text-white href="/marketplace">Marketplace</a>
     <a class= text-white href="/newitem">Post Item</a>
-    
+    {{#if logged_in}}
+    <span id="logout" style="cursor:pointer" class= text-white href="/logout">Logout</span>
+    {{/if}}
     </nav>
   </header>
   
@@ -40,5 +42,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+      {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
   </body>
 </html>
