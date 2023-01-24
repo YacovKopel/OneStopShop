@@ -24,6 +24,10 @@ Product.init(
     seller: {
       type: DataTypes.STRING,
     },
+    onMarketplace:{
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
     price: {
       type: DataTypes.DECIMAL(10,2),
       allowNull: false,

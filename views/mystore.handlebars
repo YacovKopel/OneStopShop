@@ -7,13 +7,10 @@
         <h3>Description</h3>
         <h3>Store Owner</h3>
       </div>
-      <div class="mystorecard">
-        <img src="{{image}}" alt="Product Image" />
-        <p class="mystoreprice">{{price}}</p>
-        <p>{{product_name}} <br> Description: {{description}}</p>
-        <p>{{username}}</p>
-        {{!-- <button>Edit</button> --}}
-      </div>
+  
+        {{#each products as |product|}}
+        {{> addedProducts}}
+        {{/each}}
 
     </section>
     <div class="pagenext">
@@ -27,5 +24,6 @@
    
     </div>
     
-
   </section>
+
+  <script src="btn.js"></script>
