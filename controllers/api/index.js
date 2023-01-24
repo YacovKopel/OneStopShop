@@ -8,6 +8,6 @@ const myStore=require('./userRoutes')
 
 router.use('/marketplace',marketplaceRoutes);
 router.use('/newItem', newItemRoutes);
-router.use('/user', myStore)
+router.use('/mystore', myStore)
 
 module.exports = router;

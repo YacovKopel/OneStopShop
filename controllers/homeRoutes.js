@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, mystore } = require('../models');
+const { User, Product } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -10,14 +10,14 @@ router.get('/', async (req, res) => {
 });
 router.get('/newItem', async (req, res) => {
   try {
-    res.render('newItem');
+    res.render('newitem');
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 
-router.get('/user', async (req, res) => {
+router.get('/mystore', async (req, res) => {
   try {
 
     res.render('mystore');
