@@ -15,13 +15,13 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    info: {
+    description: {
       type: DataTypes.STRING,
        },
     image: {
       type: DataTypes.STRING,
     },
-    username: {
+    seller: {
       type: DataTypes.STRING,
     },
     price: {

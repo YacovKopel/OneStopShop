@@ -45,8 +45,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.newItem div {
-  margin: 30px;
+.inputs input{
+margin-bottom: 10px;
 }
 
 .imageURL {

@@ -1,15 +1,25 @@
 const router = require('express').Router();
-// const { User, Project } = require('../models');
+const { Product } = require('../../models');
 
+router.post('/', async (req, res) => {
+    try {
+      console.log(req.body)
+      const dbProductData = await Product.create({
+        seller: req.body.seller,
+        price: req.body.price,
+        description: req.body.description,
+        product_name: req.body.product_name,
+        image: req.body.image
+      });
+    
+          res.status(200).json(dbProductData);
+        // });
+      } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+      }
+    });
+  
 
-//     // Serialize user data so templates can read it
-//     const projects = projectData.map((project) => project.get({ plain: true }));
-
-//     // Pass serialized data into Handlebars.js template
-//     res.render('homepage', { projects });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;
