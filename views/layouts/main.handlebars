@@ -23,7 +23,9 @@
     <a class= text-white href="/mystore">My Store</a>
     <a class= text-white href="/marketplace">Marketplace</a>
     <a class= text-white href="/newitem">Post Item</a>
-    
+    {{#if logged_in}}
+    <a class= text-white href="/logout">Logout</a>
+    {{/if}}
     </nav>
   </header>
   
