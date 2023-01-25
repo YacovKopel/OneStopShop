@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const { User, Product } = require("../models");
+const { Product } = require("../models");
+const withAuth = require('../utils/auth');
 
 router.get("/", async (req, res) => {
   try {
@@ -8,7 +9,7 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.get("/newItem", async (req, res) => {
+router.get("/newItem", withAuth, async (req, res) => {
   try {
     res.render("newitem", {
       logged_in: req.session.logged_in,
@@ -19,7 +20,7 @@ router.get("/newItem", async (req, res) => {
   }
 });
 
-router.get("/mystore", async (req, res) => {
+router.get("/mystore", withAuth, async (req, res) => {
   try {
     const newItemData = await Product.findAll();
 
@@ -35,7 +36,7 @@ router.get("/mystore", async (req, res) => {
   }
 });
 
-router.get("/marketplace", async (req, res) => {
+router.get("/marketplace", withAuth, async (req, res) => {
   try {
     const newItemData = await Product.findAll({
       where: { onMarketplace: true },
