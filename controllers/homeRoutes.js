@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Product } = require("../models");
-const withAuth = require('../utils/auth');
+const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
@@ -70,11 +70,4 @@ router.get("*", (req, res) => {
   return;
 });
 
-// router.post("/upload", upload.single("file"), (req, res) => {
-//   if (req.file) {
-//   res.send("Single file uploaded successfully");
-//   } else {
-//   res.status(400).send("Please upload a valid image");
-//   }
-//   });
 module.exports = router;
