@@ -7,6 +7,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+h2{
+  margin-left: 550px;
+  margin-bottom: 20px;
+}
 header {
   display: flex;
   align-items: center;
@@ -233,7 +237,7 @@ margin-bottom: 10px;
   font-family: arial;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .mystoreprice {
   color: black;

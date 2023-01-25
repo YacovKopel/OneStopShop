@@ -10,13 +10,13 @@ router.post("/signup", async (req, res) => {
     });
 
     req.session.save(() => {
-      req.session.user_id = dbuserData.id;
       req.session.logged_in = true;
 
       res.status(200).json(dbUserData);
     });
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 router.post("/login", async (req, res) => {
