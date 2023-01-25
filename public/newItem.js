@@ -1,8 +1,9 @@
+let image=''
 const newitemData = async (event) => {
     // Stop the browser from submitting the form so we can do so with JavaScript
     event.preventDefault();
   console.log("click")
-  const image= document.querySelector('#image').files[0].name;
+
   const description= document.querySelector('#description').value.trim();
   const price= document.querySelector('#price').value.trim();
   const product_name= document.querySelector('#product_name').value.trim();
@@ -28,3 +29,17 @@ const newitemData = async (event) => {
 document
 .querySelector(".addItem")
 .addEventListener('click', newitemData);
+
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'di629rovn', 
+  uploadPreset: 'bl2smv8f'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info);
+      image=result.info.url 
+    }
+  }
+)
+
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
