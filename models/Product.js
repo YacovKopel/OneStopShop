@@ -20,6 +20,7 @@ Product.init(
        },
     image: {
       type: DataTypes.STRING,
+      primaryKey:true
     },
     seller: {
       type: DataTypes.STRING,

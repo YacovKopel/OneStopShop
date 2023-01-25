@@ -1,0 +1,31 @@
+<section class="newItem">
+  <div  class="inputs">
+    <h3><u>Username:</u></h3>
+    <input type="text" placeholder="Sellers Name"  id="seller">
+    <h3><u>Product:</u></h3>
+    <input type="text" placeholder="Name of item" id="product_name">
+    <h3><u>Price:</u></h3>
+    <input type="number" name="Price" id="price" placeholder="$">
+    <div class="imageURL">
+    <h3><u>Image: </u></h3>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="image"/>
+    </form>
+  </div>
+  </div>
+  <div>
+    <h3> <u>Description: </u></h3>
+    <textarea id="description" rows="8" cols="50" placeholder="Description of item"></textarea>
+  </div>
+    <div>
+      <button class="addItem" type="submit">ADD ITEM TO STORE</button>
+    </div>
+  </section>
+<script src="newItem.js"></script>
+
+
+
+
+
+
+

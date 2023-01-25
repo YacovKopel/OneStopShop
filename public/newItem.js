@@ -2,7 +2,7 @@ const newitemData = async (event) => {
     // Stop the browser from submitting the form so we can do so with JavaScript
     event.preventDefault();
   console.log("click")
-  const image= document.querySelector('#image').value.trim();
+  const image= document.querySelector('#image').files[0].name;
   const description= document.querySelector('#description').value.trim();
   const price= document.querySelector('#price').value.trim();
   const product_name= document.querySelector('#product_name').value.trim();

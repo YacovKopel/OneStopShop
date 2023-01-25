@@ -5,6 +5,7 @@ router.post('/', async (req, res) => {
     try {
       console.log(req.body)
       const dbProductData = await Product.create({
+        // include:{upload},
         seller: req.body.seller,
         price: req.body.price,
         description: req.body.description,
@@ -19,7 +20,7 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
       }
     });
-  
+
 
 
 module.exports = router;
