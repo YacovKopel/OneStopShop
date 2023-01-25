@@ -269,6 +269,7 @@ margin-bottom: 10px;
   padding: 30px 30px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   text-align: center;
+  width: 300px;
 }
 .table .img-section{
   display: flex;

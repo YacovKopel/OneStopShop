@@ -8,10 +8,11 @@
     <input type="number" name="Price" id="price" placeholder="$">
     <div class="imageURL">
     <h3><u>Image: </u></h3>
-    <input type="url" name="image" id="image" placeholder="Enter image URL">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="image"/>
+    </form>
   </div>
   </div>
-
   <div>
     <h3> <u>Description: </u></h3>
     <textarea id="description" rows="8" cols="50" placeholder="Description of item"></textarea>
@@ -19,7 +20,12 @@
     <div>
       <button class="addItem" type="submit">ADD ITEM TO STORE</button>
     </div>
-
   </section>
-
 <script src="newItem.js"></script>
+
+
+
+
+
+
+
