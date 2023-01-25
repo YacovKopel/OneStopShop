@@ -3,35 +3,35 @@
       "product_name": "Book",
       "description": "harry potter and the chamber of secrets",
       "image": "https://preview.redd.it/m3mcv0ydtfaa1.png?width=640&crop=smart&auto=webp&v=enabled&s=dec2dd8e760640b0437347e2d3fa6c0c14185b7a",
-      "seller": "Bob",
+      "seller": "Bryan",
       "price": "9.99"
     },
     {
       "product_name": "Car",
       "description": "brand new JEEP CHEROKKEE",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/2019_Jeep_Cherokee_Latitude_front_5.27.18.jpg/560px-2019_Jeep_Cherokee_Latitude_front_5.27.18.jpg",
-      "seller": "Steve",
+      "seller": "Bryan",
       "price": "39999"
     },
       {
       "product_name": "Bike",
       "description": "Used 21 Speed Hybrid Bike",
       "image": "https://fh-sites.imgix.net/sites/1921/2016/09/26201304/Hybrid.jpg",
-      "seller": "Steve",
+      "seller": "Bryan",
       "price": "120.00"
     },
         {
       "product_name": "Laptop",
       "description": "Dell Inspiron Touch-Laptop",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6504/6504381_sd.jpg;maxHeight=400;maxWidth=600",
-      "seller": "Jeff",
+      "seller": "Bryan",
       "price": "1049"
     },
           {
       "product_name": "Refrigerator",
       "description": "KitchenAid 36 inch Wide Side By Side Refrigerator with PrintShield™ Finish",
       "image": "https://s3.img-b.com/image/private/t_base,c_lpad,f_auto,dpr_auto,w_330,h_320/v3/product/GE/ge-pse25kyhfs.jpg",
-      "seller": "Jeff",
+      "seller": "Bryan",
       "price": "2899"
     }
   ]
