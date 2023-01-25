@@ -17,7 +17,7 @@ The Marketplace is designed to make it easier for Users and companies to Trade/S
 ## Usage:
 A short description (20-125 words) to go with your post listing in Marketplace. Note that this description is subject to edits before publication.
 Become a Marketplace User
-Are you interested in listing on the Marketplace? Start by signing in process by URL.
+Are you interested in listing on the Marketplace? Start by signing in process by URL...
 
 Marketplace listings features and image, price and description. Please follow the directions for submitting and posting . Post submissions will not be accepted without the required assets.
 
